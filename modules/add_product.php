@@ -2,22 +2,31 @@
 include('../includes/header.php');
 ?>
 
-<h2>Products Management</h2>
+<h2>Add Product</h2>
 
-<a href="add_product.php">+ Add Product</a>
+<form method="POST">
 
-<table border="1" cellpadding="10">
-    <tr>
-        <th>ID</th>
-        <th>Product Name</th>
-        <th>SKU</th>
-        <th>Price</th>
-        <th>Stock</th>
-        <th>Action</th>
-    </tr>
+    <label>Product Name</label><br>
+    <input type="text" name="product_name"><br><br>
 
-    <!-- Products Data Here -->
-</table>
+    <label>SKU</label><br>
+    <input type="text" name="sku"><br><br>
+
+    <label>Category</label><br>
+    <input type="text" name="category"><br><br>
+
+    <label>Purchase Price</label><br>
+    <input type="number" step="0.01" name="purchase_price"><br><br>
+
+    <label>Selling Price</label><br>
+    <input type="number" step="0.01" name="selling_price"><br><br>
+
+    <label>Stock</label><br>
+    <input type="number" name="stock"><br><br>
+
+    <button type="submit">Save Product</button>
+
+</form>
 
 <?php
 include('../includes/footer.php');
